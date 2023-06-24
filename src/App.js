@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ReactApexChart from 'react-apexcharts';
+import Modal from './Modal';
+import '../src/App.css'
 
 function App() {
+  const [chartOptions, setChartOptions] = useState({
+    chart: {
+      id: 'basic-bar',
+    },
+    xaxis: {
+      categories: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+    },
+  });
+
+  const [chartSeries, setChartSeries] = useState([
+    {
+      name: 'Series 1',
+      data: [30, 40, 45, 50, 39],
+    },
+  ]);
+
+  const [chartType, setChartType] = useState('bar');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="chart">
+      <ReactApexChart  options={chartOptions} series={chartSeries} type={chartType} />
+      <Modal/>
     </div>
   );
 }

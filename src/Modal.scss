@@ -1,0 +1,166 @@
+.modal-overlay {
+    opacity: 1;
+    transition: opacity 0.3s;
+  
+    &.open {
+      opacity: 1;
+    }
+  }
+  button{
+    margin: 30px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px black;
+    
+  }
+  button:hover{
+    transform: scale(1.1) ;
+  }
+  .modal-content{
+    text-align: center;
+  }
+  h2{
+    font-family: sans-serif;
+    font-size: x-large;
+    letter-spacing:.4rem;
+    text-shadow: 2px 2px grey;
+    
+  }
+  p{
+    font-weight: bold;
+    font-style: italic;
+    
+  }
+
+  header {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header-left h3 {
+    margin: 0;
+  }
+  
+  .header-right h4 {
+    margin: 0;
+  }
+
+  /* Form Styles */
+form {
+  margin: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Admission Journey Styles */
+.admission-journey {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.admission-journey h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.admission-journey-content {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.admission-journey-content.show {
+  opacity: 1;
+}
+
+.admission-journey h2 input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.admission-journey h3 {
+  margin-top: 20px;
+}
+
+.admission-journey-content h3 {
+  margin-top: 0;
+}
+
+//check box 
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  
+}
+
+input[type="checkbox"]:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
